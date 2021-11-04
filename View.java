@@ -81,20 +81,20 @@ public class View extends JFrame implements ActionListener {
         }
 
         JPanel panelExam = new JPanel();               // Create the exam panel which contains the "Exam: " label and the two exam text fields.
-        panelHomework.add(new JLabel("Exam: "));       // and the two exam text fields?? The pseudocode is very similar to the code abve
-        for (int i = 0; i < Main.getNumExams() - 1; i++) { // For i = 0 to the number of homework assignments
+        panelExam.add(new JLabel("Exam: "));       // and the two exam text fields?? The pseudocode is very similar to the code abve
+
+//        for (int i = 0; i < Main.getNumExams() - 1; i++) { // For i = 0 to the number of homework assignments
 //            mExamText[i] = new JTextField(5);          //Create a textfield mHomeworkText[i] displaying 5 cols
 //            panelExam.add(mExamText[i]);              //Add mHomeworkText[i] to the panel
-        }
+//        }
         JPanel panelButtons = new JPanel();            // Create a JPanel named panelButtons using FlowLayout
-        mClearButton = new JButton();                  // Create the Clear button mClearButton labeled "Clear"
-// Make this View the action listener for mClearButton ?? see line below
+        mClearButton = new JButton("Clear");                  // Create the Clear button mClearButton labeled "Clear"
         mClearButton.addActionListener(this); //not sure if correct
         panelButtons.add(mClearButton);                // Add the  Clear button to the panel
-        mSaveButton = new JButton();
+        mSaveButton = new JButton("Save");
         mSaveButton.addActionListener(this);  //same thing but for Save, not sure if correct
         panelButtons.add(mSaveButton);
-        mExitButton = new JButton();
+        mExitButton = new JButton("Exit");
         mExitButton.addActionListener(this);  //same thing but for Exit, not sure if correct
         panelButtons.add(mExitButton);
         JPanel panelMain = new JPanel();               // Create a JPanel named panelMain using a vertical BoxLayout
