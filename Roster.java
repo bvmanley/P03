@@ -32,7 +32,9 @@ public class Roster {
      * argument to setStudentList() to make mStudentList refer to the ArrayList
      */
     public Roster() {
+
         setStudentList(new ArrayList<Student>());    //needs work
+        mStudentList = new ArrayList<>();
     }
 
     /**
