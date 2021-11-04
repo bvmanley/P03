@@ -28,6 +28,8 @@ public class Main {
      * run().
      */
     public static void main(String[] args) {
+        int exams = getNumExams();
+        System.out.println(exams);
         Main obj = new Main();
         obj.run();
     }
