@@ -69,7 +69,8 @@ public class View extends JFrame implements ActionListener {
         panelSearch.add(mStudentName);                 // Add mStudentName to the panel
         mSearchButton = new JButton("Search");         // Create mSearchButton with the label "Search"
         //Make this View the action listner for the button ??
-        panelSearch.add(mStudentName);                 // Add the button to the panel
+        mSearchButton.addActionListener(this);
+        panelSearch.add(mSearchButton);                 // Add the button to the panel
 
         JPanel panelHomework = new JPanel();           // Create a JPanel named panelHomework which uses the FlowLayout
         panelHomework.add(new JLabel("Homework: "));   // Add a JLabel "Homework: " to the panel
@@ -81,9 +82,9 @@ public class View extends JFrame implements ActionListener {
 
         JPanel panelExam = new JPanel();               // Create the exam panel which contains the "Exam: " label and the two exam text fields.
         panelHomework.add(new JLabel("Exam: "));       // and the two exam text fields?? The pseudocode is very similar to the code abve
-        for (int i = 0; i < Main.getNumExams(); i++) { // For i = 0 to the number of homework assignments
-            mExamText[i] = new JTextField(5);          //Create a textfield mHomeworkText[i] displaying 5 cols
-            panelExam.add(mExamText[i]);              //Add mHomeworkText[i] to the panel
+        for (int i = 0; i < Main.getNumExams() - 1; i++) { // For i = 0 to the number of homework assignments
+//            mExamText[i] = new JTextField(5);          //Create a textfield mHomeworkText[i] displaying 5 cols
+//            panelExam.add(mExamText[i]);              //Add mHomeworkText[i] to the panel
         }
         JPanel panelButtons = new JPanel();            // Create a JPanel named panelButtons using FlowLayout
         mClearButton = new JButton();                  // Create the Clear button mClearButton labeled "Clear"
