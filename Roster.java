@@ -33,8 +33,8 @@ public class Roster {
      */
     public Roster() {
 
-        setStudentList(new ArrayList<Student>());    //needs work
         mStudentList = new ArrayList<>();
+        setStudentList(new ArrayList<Student>()); //needs work
     }
 
     /**
