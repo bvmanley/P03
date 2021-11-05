@@ -44,8 +44,9 @@ public class GradebookWriter extends PrintWriter {
      */
     public void writeGradeBook(Roster pRoster) {
         for (Student student : pRoster.getStudentList()) {
-            System.out.println(student);
+            println(student);
         }
-        //out.close();
+        close();
     }
 }
+
