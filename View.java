@@ -139,8 +139,8 @@ public class View extends JFrame implements ActionListener {
         } else if (pEvent.getSource() == mExitButton) {         // if the source of the event was the Exit button
             if (Student.getCurrStudent() != null) {             // If Student.getCurrStudent() is not null
                 saveStudent(Student.getCurrStudent());          // Call saveStudent(Student.getCurrStudent())
+             getMain().exit();                                  //Call getMain().exit() to terminate the application
             }
-            getMain().exit();                                   //Call getMain().exit() to terminate the application
         }
     }
 
