@@ -3,26 +3,23 @@ package proj3;
 import java.util.ArrayList;
 
 public class Sorter {
-    //implements quicksort algorithm
 
-    // use the UML class diagram and the quicksort lecture notes.
     private static int partition(ArrayList<Student> pList, int pFromIdx, int pToIdx) {
-        Student pivot = pList.get(pFromIdx); //choose the first element of the list to be the pivot
+        Student pivot = pList.get(pFromIdx);
         int leftIndex = pFromIdx - 1;
         int rightIndex = pToIdx + 1;
-        while (leftIndex < rightIndex) { //keep partitioning until the indexes cross
-            leftIndex++; //move leftIndex rightward until an element that is greater than or equal to the pivot is reached
-            while (pList.get(leftIndex).compareTo(pivot) <= 0) {
+        while (leftIndex < rightIndex) {
+            leftIndex++;
+            while (pList.get(leftIndex).compareTo(pivot) < 0) {
                 leftIndex++;
             }
             rightIndex--;
-            //these increments/decrements may be accidentally doubled up,
-            while (pList.get(rightIndex).compareTo(pivot) >= 0) { //Move rightIndex leftward until an element that is less than or equal to pivot is reached.
+            while (pList.get(rightIndex).compareTo(pivot) > 0) {
                 rightIndex--;
             }
             if (leftIndex < rightIndex) {
                 swap(pList, leftIndex, rightIndex);
-            } //leftIndex < rightIndex Then: swap(list, leftIndex, rightIndex)
+            }
         }
         return rightIndex;
     }
@@ -41,6 +38,8 @@ public class Sorter {
     }
 
     private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2) {
+        Student temp = pList.get(pIdx1);
+        pList.set(pIdx1, pList.get(pIdx2));
+        pList.set(pIdx2, temp);
     }
-
 }
