@@ -224,12 +224,12 @@ public class View extends JFrame implements ActionListener {
      * and writes the results to the Student record in the Roster.
      */
     private void saveStudent(Student pStudent) {
-        for (int i = 0; i < Main.getNumHomeworks() - 1; i++) {
+        for (int i = 0; i < Main.getNumHomeworks(); i++) {
             String hwstr = mHomeworkText[i].getText();
             int hw = Integer.parseInt(hwstr);
             pStudent.setHomework(i, hw);
         }
-        for (int i = 0; i < Main.getNumExams() - 1; i++) {
+        for (int i = 0; i < Main.getNumExams(); i++) {
             String examstr = mExamText[i].getText();
             int exam = Integer.parseInt(examstr);
             pStudent.setExam(i, exam);
