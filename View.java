@@ -191,6 +191,7 @@ public class View extends JFrame implements ActionListener {
             String examstr = Integer.toString(exam);
             mExamText[i].setText(examstr);
         }
+        
     }
 
     /**
@@ -234,6 +235,7 @@ public class View extends JFrame implements ActionListener {
             int exam = Integer.parseInt(examstr);
             pStudent.setExam(i, exam);
         }
+        mStudentName.setText(pStudent.getFullName());
     }
 
     /**
